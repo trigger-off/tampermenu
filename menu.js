@@ -33,7 +33,7 @@ function createMenu(options){
 
     $expander.text(options.textName)
     .button({
-        icons: { primary: "ui-arrowthickstop-1-e" },
+        icons: { primary: "ui-icon-arrow-4-diag" },
         text: false
     })
     .click(function(){
