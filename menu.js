@@ -55,6 +55,6 @@ function createMenu(options){
     $base.append($expander)
     .append($menu.menu());
 
-    $('body').prepend($base);
+    $('body').append($base);
 
 }
