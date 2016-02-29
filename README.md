@@ -1,7 +1,7 @@
 # tampermenu
 Quick create tamper monkey floating menus.
 
-##Example usage
+##Example UserScript
 ```javascript
 // ==UserScript==
 // @name         Test tampermenu
