@@ -2,7 +2,7 @@
 Quick create tamper monkey floating menus.
 
 
-<code>
+```javascript
 // ==UserScript==
 // @name         Test tampermenu
 // @namespace    http://tampermonkey.net/
@@ -31,4 +31,4 @@ $("head").append(
 
 createMenu({textName: "hiya"});
 
-</code>
+```
