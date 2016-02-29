@@ -45,7 +45,7 @@ function createMenu(options){
     
     //INITIALIZE
     $close.text('close')
-    .prepend(newIcon('ui-icon-close'))
+    .prepend(newIcon('ui-icon-arrowthick-1-nw'))
     .click(function(){
         $base.toggleClass('expanded'); 
     })
