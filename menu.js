@@ -47,6 +47,7 @@ function createMenu(options){
         $item.text(itemConfig.menuText);
         $item.prepend(addIcon(itemConfig.iconClass));
         $item.click(itemConfig.onClick);
+        $menu.append($item);
         items.push($item);
     });
     
