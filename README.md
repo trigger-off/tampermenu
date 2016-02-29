@@ -29,6 +29,14 @@ $("head").append(
     + '" rel="stylesheet" type="text/css">'
 );
 
-createMenu({textName: "hiya"});
-
+var menuHandler = createMenu({
+    textName: "hiya",
+    items: [{
+        menuText: "DO IT!",
+        iconClass: "ui-icon-heart",
+        onClick: function(){
+           alert("hi");
+        }
+      }]
+});
 ```
