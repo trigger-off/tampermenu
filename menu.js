@@ -56,7 +56,7 @@ function createMenu(options){
     .prepend(newIcon('ui-icon-arrowthick-1-nw'))
     .click(function(){
         $base.toggleClass('expanded'); 
-    })
+    });
     
     $menu.append($close);
 
