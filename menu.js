@@ -40,6 +40,16 @@ function createMenu(options){
     });
 
     
+    var items = [];
+    //CUSTOM ITEMS
+    $.each(options.items, function (i, itemConfig) {
+        var $item = $('<li/>').attr('id', 'tamperMenuItem' + i);
+        $item.text(itemConfig.menuText);
+        $item.prepend(addIcon(itemConfig.iconClass));
+        $item.click(itemConfig.onClick);
+        items.push($item);
+    });
+    
     //INITIALIZE
     $close.text('close')
     .prepend(newIcon('ui-icon-arrowthick-1-nw'))
