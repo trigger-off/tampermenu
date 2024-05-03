@@ -85,6 +85,7 @@ function createMenu(options){
     loadjscssfile("https://code.jquery.com/ui/1.13.3/jquery-ui.js", function() {
         $( function() {
             $( "#tamperBase" ).draggable();
+            $( "#tamperExpander" ).draggable();
           } );
      });
 });
