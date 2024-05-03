@@ -1,6 +1,25 @@
 /*global GM_addStyle, $ */
 'use strict';
-
+function loadjscssfile(filename, callback) {
+    var fileref = document.createElement('script')
+    fileref.setAttribute("type", "text/javascript")
+    fileref.setAttribute("src", filename)
+    if (fileref.readyState) {
+        fileref.onreadystatechange = function() { /*IE*/
+            if (fileref.readyState == "loaded" || fileref.readyState == "complete") {
+                fileref.onreadystatechange = null;
+                callback();
+            }
+        }
+    } else {
+        fileref.onload = function() {  /*Other browsers*/
+            callback();
+        }
+    }
+    // Try to find the head, otherwise default to the documentElement
+    if (typeof fileref != "undefined")
+        (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(fileref)
+}
 function createMenu(options){
 
     function newIcon(iconClass){
@@ -62,7 +81,14 @@ function createMenu(options){
 
     $base.append($expander)
     .append($menu.menu());
-
+    loadjscssfile("https://code.jquery.com/jquery-3.7.1.js", function() {
+    loadjscssfile("https://code.jquery.com/ui/1.13.3/jquery-ui.js", function() {
+        $( function() {
+            $( "#tamperBase" ).draggable();
+          } );
+     });
+});
+    $('body').append();
     $('body').append($base);
 
 }
